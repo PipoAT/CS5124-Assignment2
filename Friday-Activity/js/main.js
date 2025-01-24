@@ -58,6 +58,7 @@ function drawChart(data){
 	// TO DO CREATE a yScale using d3.scaleLinear, with domain [ max year, min year] and range [0, height]  Note- why did I reverse the domain going from max to min? 
 	const yScale = d3.scaleLinear()
 		.domain([d3.max(data, d => d.year), d3.min(data, d => d.year)])
+		.range([0, height])
 
 	// TO DO CREATE an rScale using d3.scaleLinear, with domain the extent of the cost field in data, and range 5, 100
 	//    note- remember there are calls d3.min, d3.max and d3.extent.  Check the tutorial for today
